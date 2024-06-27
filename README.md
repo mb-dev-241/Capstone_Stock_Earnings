@@ -40,6 +40,25 @@ Additional commentary and results are contained in the Jupyter notebooks referen
 
 #### Next steps
 
+In order to further develop the results obtained, we make 3 suggestions for potential improvement:
+
+1. Discovery of additional numeric features in the sentiment data
+2. Use of additional LLMs
+3. Use of additional ensemble techniques
+
+Discovery of additional numeric features
+
+Our LLM was able to generate sentiment data at a sentence level. To simplify analysis, we analyzed sentiment in larger blocks. For example, our variable sentiment_1_1 refers to the sentiment of the full earnings call, sentiment_1_4 refers to sentiment of the first quarter of the earnings call, etc.
+
+Additional structure to the earnings call may have been lost in the process. It may be that poor earnings calls have additional structure at a granular level consisting of a known sentiment pattern (eg. compliment sandwich) that portend even more highly negative outcomes. Discovering these features, if they exist, would provide additional gains to our model.
+
+Use of additional LLMs
+
+In our case, we only used a single LLM. Use of additional LLMs, particularly those tuned to analyzing financial information, would likely result in further improvement.
+
+Use of additional ensemble techniques
+
+We explored a few ensemble techniques in this analysis but our best, Random Forest, only makes use of decision trees. An ensemble technique combining multiple types of estimators may be able to improve this further.
 
 #### Outline of project
 
